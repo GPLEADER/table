@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="container">
+    <button id="btn1" onclick="myFunc()">Dark</button>
+    <button id="btn2" onclick="myFunc2()">Light</button>
+    <table bgcolor="#FCFCFC">
+        <thead>
+        <tr>
+            <th><i class="bi bi-calendar4"></i> Date</th>
+            <th><i class="bi bi-list"></i> Title</th>
+            <th><i class="bi bi-person"></i> Author</th>
+            <th><i class="bi bi-list-ul"></i> Genre</th>
+            <th><i class="bi bi-star"></i> Rating</th>
+            <th><i class="bi bi-link-45deg"></i> URL</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>11/11/2022</td>
+            <td>Fire & Blood</td>
+            <td>George R.R. Martin</td>
+            <td class="changer2"><span class="pink">Fantasy</span> <span class="purple">Fiction</span></td>
+            <td><span class="gold"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i
+                    class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span></td>
+            <td>https://abc.in</td>
+        </tr>
+        <tr>
+            <td>22/10/2022</td>
+            <td>Bridge of Clay</td>
+            <td>Markus Suzak</td>
+            <td class="changer2"><span class="purple">Fiction</span></td>
+            <td><span class="gold"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i
+                    class="bi bi-star-fill"></i></span></td>
+            <td>https://abc.in</td>
+
+
+        </tr>
+        <tr>
+            <td>22/05/2022</td>
+            <td>Do Epic Shit</td>
+            <td>Ankur Warikoo</td>
+            <td class="changer2"><span class="green">Self-help</span></td>
+            <td>
+                <span class="gold">
+                    <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i
+                        class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i
+                        class="bi bi-star-fill"></i></span>
+            </td>
+            <td>https://abc.in</td>
+
+
+        </tr>
+        <tr>
+            <td>14/07/2020</td>
+            <td>My Sister's Keeper</td>
+            <td>Jodi Picoult</td>
+            <td class="changer2"><span class="purple">Fiction</span> <span class="yellow">Sappy</span></td>
+            <td><span class="gold"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i
+                    class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span>
+            </td>
+            <td>https://abc.in</td>
+
+
+        </tr>
+        <tr>
+            <td>12/04/2021</td>
+            <td>Atomic Habits</td>
+            <td>James Clear</td>
+            <td class="changer2"><span class="green">Self-help</span></td>
+            <td><span class="gold"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i
+                    class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span>
+            </td>
+            <td>https://abc.in</td>
+
+
+        </tr>
+        <tr>
+            <td>02/02/2022</td>
+            <td>Dune</td>
+            <td>Frank Herbert</td>
+            <td class="changer2"><span class="pink">Sci-Fi</span></td>
+            <td><span class="gold"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i
+                    class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span></td>
+            <td>https://abc.in</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+
+    function myFunc() {
+        const tds = document.getElementsByTagName("td"); // Get all <td> elements
+        for (let i = 0; i < tds.length; i++) { // Loop through each <td>
+            tds[i].classList.add("changer"); // Add the highlight class
+        }
+        const ths = document.getElementsByTagName("th"); // Get all <td> elements
+        for (let i = 0; i < ths.length; i++) { // Loop through each <td>
+            ths[i].classList.add("changer"); // Add the highlight class
+        }
+        document.getElementById("btn1").style.display = "none"
+        document.getElementById("btn2").style.display = "block"
+        const body = document.getElementsByTagName("body");
+        if (body.length > 0) {
+            body[0].classList.add("body");
+        }
+        const tb = document.getElementsByTagName("table");
+        if (tb.length > 0) {
+            tb[0].classList.add("body");
+        }
+
+        // document.getElementsByClassName("changer2")
+        const txt = document.getElementsByClassName("changer2"); // Get all <td> elements
+        for (let i = 0; i < txt.length; i++) { // Loop through each <td>
+            txt[i].classList.add("changer3"); // Add the highlight class
+        }
+    }
+
+    function myFunc2() {
+        const tds = document.getElementsByTagName("td"); // Get all <td> elements
+        for (let i = 0; i < tds.length; i++) { // Loop through each <td>
+            tds[i].classList.remove("changer"); // Add the highlight class
+        }
+        const ths = document.getElementsByTagName("th"); // Get all <td> elements
+        for (let i = 0; i < ths.length; i++) { // Loop through each <td>
+            ths[i].classList.remove("changer"); // Add the highlight class
+        }
+        document.getElementById("btn2").style.display = "none"
+        document.getElementById("btn1").style.display = "block"
+        const body = document.getElementsByTagName("body");
+        if (body.length > 0) {
+            body[0].classList.remove("body");
+        }
+        const tb = document.getElementsByTagName("table");
+        if (tb.length > 0) {
+            tb[0].classList.remove("body");
+        }
+    }
+</script>
+</body>
+</html>
